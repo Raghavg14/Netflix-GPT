@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Netflix-GPT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Netflix-GPT is a web application that provides **personalized movie recommendations** using **Google’s Gemini AI**. It fetches real-time movie data from **TMDB API** and allows users to explore trending movies, watch trailers, and get AI-powered movie suggestions. The app is built with **React, Firebase, Redux, TailwindCSS**, and **TMDB API** for a seamless and dynamic user experience.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Sign Up & Sign In**: Uses Firebase database and API for authentication.
+- **Dynamic Movie Trailers**: Displays the latest movie trailers as a background video on the homepage.
+- **Movie Categories**: Fetches **Trending, Popular, Top Rated, and Now Playing** movies from TMDB API.
+- **Movie Details Modal**: Clicking on a movie shows a modal with detailed information.
+- **AI-Powered Recommendations**: Uses **Gemini AI** to provide movie suggestions based on user prompts (e.g., “retro comedy movies”).
+- **State Management**: Redux is used to efficiently manage application state.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Authentication**: Firebase API is used for storing and validating user credentials.
+- **Data Fetching**: TMDB API is used to get real-time movie data.
+- **AI Integration**: Gemini AI suggests movies based on user queries.
+- **State Management**: Redux Toolkit is used for caching and efficient data handling.
+- **Styling**: TailwindCSS ensures a clean, responsive UI.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** (v19.0.0)
+- **React Router** (v7.2.0) for page navigation
+- **Redux Toolkit** (v2.5.1) for state management
+- **Firebase** (v11.3.1) for user authentication and database
+- **TMDB API** for fetching movie data
+- **Google Gemini AI** for intelligent movie recommendations
+- **TailwindCSS** (v3.4.17) for styling
 
-### `npm run build`
+## Environment Variables Configuration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To set up the project, create a `.env` file in the root directory and add the required API keys.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```env
+# Firebase Configuration
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+FIREBASE_PROJECT_ID=your_firebase_project_id
+FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+FIREBASE_APP_ID=your_firebase_app_id
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# API Keys
+REACT_APP_TMDB_API_KEY=your_tmdb_api_key
+REACT_APP_GEMINI_AI_API_KEY=your_google_ai_api_key
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/Raghavg14/AI-Trip-Planner.git
+   cd travel-planner
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies**:
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Set up environment variables**:
+   Create a `.env` file in the root directory with the variables provided above.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Run the development server**:
 
-### Code Splitting
+   ```bash
+   npm run dev
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. **Build the application**:
+   ```bash
+   npm run build
+   ```
